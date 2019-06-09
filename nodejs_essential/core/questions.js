@@ -9,7 +9,7 @@ const questions = [
     "What are you doing with nodejs"
 ];
 
-const collectAnswers = (questions, done) => {
+const collectAnswers = (questions, done = f => f) => {
     const answers = [];
     const [firstQuestion] = questions;
 
