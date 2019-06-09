@@ -1,5 +1,13 @@
 const fs = require("fs");
 
-const text = fs.readFileSync("./list.js", "UTF-8");
+fs.readFile("./list.js", "UTF-8", (err, data) => {
+    console.log(data.toString());
+});
 
-console.log(text);
+fs.readFile("./cycling.png", (err, data) => {
+    if(err) {
+        console.log(`An error has occured: ${err.message}`);
+        process.exit();
+    }
+    console.log(data);
+});
