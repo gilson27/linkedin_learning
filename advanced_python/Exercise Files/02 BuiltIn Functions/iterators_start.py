@@ -7,15 +7,24 @@ def main():
     daysFr = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
 
     # TODO: use iter to create an iterator over a collection
+    i = iter(days)
+    print(next(i))
 
     # TODO: iterate using a function and a sentinel
+    with open("advanced_python\\Exercise Files\\02 BuiltIn Functions\\testfile.txt", "r") as fp:
+        for line in iter(fp.readline, ''):
+            print(line)
 
     # TODO: use regular interation over the days
+    for m in range(len(days)):
+        print(m, days[m])
 
     # TODO: using enumerate reduces code and provides a counter
-
+    for i,m in enumerate(days, start=1):
+        print(i,m)
     # TODO: use zip to combine sequences
-
+    for i, m in enumerate(zip(days, daysFr), start=1):
+        print(i, m[0], "=", m[1])
 
 if __name__ == "__main__":
     main()
