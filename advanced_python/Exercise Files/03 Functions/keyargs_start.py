@@ -2,7 +2,7 @@
 
 
 # use keyword-only arguments to help ensure code clarity
-def myFunction():
+def myFunction(a, b, *, exception=False):
     pass
 
 
