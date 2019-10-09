@@ -2,7 +2,9 @@
 
 
 def countdown(x):
-    return
-
+    if x == 0:
+        return
+    print("Counting ", x, " ...")
+    countdown(x-1)
 
 countdown(5)
