@@ -24,7 +24,8 @@ def partition(datavalues, first, last):
     # start searching for the crossing point
     done = False
     while not done:
-        # TODO: advance the lower index
+        # TODO: advance the lower 
+        
         while lower <= upper and datavalues[lower] <= pivotvalue:
             lower += 1
         # TODO: advance the upper index
